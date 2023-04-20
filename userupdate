@@ -1,0 +1,21 @@
+#! /bin/bash
+RED='\033[0;31m'
+NC='\033[0m'
+BOLD=$(tput bold)
+NORM=$(tput sgr0)
+
+for i in `cat ./userlist.txt` ;
+do
+useradd $i ;
+id $i;
+
+echo -e "Username: ${RED}${BOLD}$i${NC}${NORM}"
+
+
+passwd  "$i";
+echo -e '.\n.\n.\n.'
+
+userdel $i;
+
+done
+
