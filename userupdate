@@ -11,11 +11,7 @@ id $i;
 
 echo -e "Username: ${RED}${BOLD}$i${NC}${NORM}"
 
-
 passwd  "$i";
 echo -e '.\n.\n.\n.'
-
-userdel $i;
-
 done
 
